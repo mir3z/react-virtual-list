@@ -7,6 +7,10 @@ Virtual vertical list component in React. Displays thousands of items without br
 This component allows to create very long lists that work extremely fast. This is achieved by rendering only the
 part of the list visible on the viewport.
 
+## Demo
+
+* [Interactive Demo](http://mir3z.github.io/react-virtual-list/demo/)
+
 ## Usage
 
 The library is released as UMD module. Just load it in any way you like. If you include it directly on the web page
