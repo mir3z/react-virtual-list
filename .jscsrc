@@ -1,0 +1,8 @@
+{
+	"preset": "airbnb",
+	"validateIndentation": 4,
+	"requireTrailingComma": null,
+	"requireLineFeedAtFileEnd": null,
+    "requireShorthandArrowFunctions": false,
+    "maximumLineLength": 120
+}
