@@ -1,0 +1,45 @@
+#list-wrapper, #list-wrapper * {
+    box-sizing: border-box;
+}
+
+#list-wrapper {
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 250px;
+}
+
+#viewport {
+    margin: 0 512px 0 0;
+}
+
+#viewport.container {
+    height: 400px;
+    overflow: auto;
+}
+
+ul li h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+ul li p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    line-height: 20px;
+}
+
+ul {
+    list-style: none outside none;
+}
+
+ul li {
+    padding: 10px 15px;
+    overflow: hidden;
+    background-color: #53A2BE;
+}
+
+ul li.even {
+    background-color: #1D84B5;
+}
