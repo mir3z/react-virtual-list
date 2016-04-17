@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>React Virtual List by mir3z</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>React Virtual List</h1>
+        <p>virtual list in React</p>
+
+        <p class="view"><a href="https://github.com/mir3z/react-virtual-list">View the Project on GitHub <small>mir3z/react-virtual-list</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/mir3z/react-virtual-list/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mir3z/react-virtual-list/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mir3z/react-virtual-list">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="react-virtual-list" class="anchor" href="#react-virtual-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>React Virtual List</h1>
+
+<p>Virtual vertical list component in React. Displays thousands of items without breaking a sweat!</p>
+
+<h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h2>
+
+<p>This component allows to create very long lists that work extremely fast. This is achieved by rendering only the
+part of the list visible on the viewport.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>The library is released as UMD module. Just load it in any way you like. If you include it directly on the web page
+it is exposed as <code>VirtualList</code> global.</p>
+
+<p>The component accepts the following props:</p>
+
+<ul>
+<li>
+<code>items</code> (<code>array</code>, default: <code>[]</code>) - array of all list items.</li>
+<li>
+<code>itemFactory</code> (<code>function</code>, required) - the function that receives item as param and renders single list item as <code>ReactElement</code>.</li>
+<li>
+<code>itemHeight</code> (<code>number</code>, required) - the height of the item in pixels. It has to be set in CSS rules as well.</li>
+<li>
+<code>bufferSize</code> (<code>number</code>, default: <code>0</code>) - the number of items that may be rendered before and after the visible part of the list.</li>
+<li>
+<code>viewport</code> (<code>DOMElement</code>, default: <code>window</code>) - the element that contains the list. Use this if you want to place list inside a scrollable container.</li>
+<li>
+<code>tagName</code> (<code>string</code>, default: <code>ul</code>) - tag name of the container that contains list items.</li>
+</ul>
+
+<h3>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> items <span class="pl-k">=</span> [];
+
+<span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> <span class="pl-c1">1000</span>; i<span class="pl-k">++</span>) {
+    <span class="pl-smi">items</span>.<span class="pl-c1">push</span>({ number<span class="pl-k">:</span> i });
+}
+
+<span class="pl-k">function</span> <span class="pl-en">createItem</span>(<span class="pl-smi">item</span>, <span class="pl-smi">props</span>, <span class="pl-smi">state</span>) {
+    <span class="pl-k">return</span> <span class="pl-k">&lt;</span>li key<span class="pl-k">=</span>{ <span class="pl-smi">item</span>.<span class="pl-smi">number</span> }<span class="pl-k">&gt;</span>Item #{ <span class="pl-smi">item</span>.<span class="pl-smi">number</span> }<span class="pl-k">&gt;&lt;</span>li<span class="pl-k">&gt;</span>;
+}
+
+<span class="pl-k">&lt;</span>VirtualList items<span class="pl-k">=</span>{ items } itemFactory<span class="pl-k">=</span>{ createItem } itemHeight<span class="pl-k">=</span>{ <span class="pl-c1">100</span> } <span class="pl-k">/</span><span class="pl-k">&gt;</span></pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT). Copyright (c) 2016 mirz (<a href="mailto:mirz.hq@gmail.com">mirz.hq@gmail.com</a>)</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/mir3z">mir3z</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
