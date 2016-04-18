@@ -57,7 +57,7 @@ export default React.createClass({
     getInitialState() {
         return {
             buffer: 0,
-            count: 100000,
+            count: 10000,
             height: 100,
             viewport: 'window'
         };
